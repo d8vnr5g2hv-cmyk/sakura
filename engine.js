@@ -12,9 +12,11 @@
   const log = [];
 
   const eraOf = c => ST[c].era;
+  const chNo = ch => ch.label || `第${ch.n}章`;
+  window.chNo = chNo;
   function imgOf(key, era) {
     const ch = CHARS[key]; if (!ch) return null;
-    const order = { kinder: ['kinder', 'elem', 'middle', 'high'], elem: ['elem', 'kinder', 'middle', 'high'], middle: ['middle', 'high', 'elem'], high: ['high', 'middle'] }[era];
+    const order = { kinder: ['kinder', 'elem', 'middle', 'high'], elem: ['elem', 'kinder', 'middle', 'high'], middle: ['middle', 'high', 'elem'], high: ['high', 'middle'], high2: ['high', 'middle'] }[era];
     for (const e of order) if (ch.img[e]) return { src: ch.img[e] + '.webp', kid: e === 'kinder' || e === 'elem' };
     return null;
   }
@@ -138,7 +140,7 @@
       if (L.fx === 'indigo') { indigo = true; document.body.classList.add('indigo'); petals.color('indigo'); }
     }
     toast(sc.title);
-    log.push({ sc: `第${ST[pos.c].n}章　${sc.title}` });
+    log.push({ sc: `${chNo(ST[pos.c])}　${sc.title}` });
     Save.d.seen[sc.key] = true;
   }
   function show() {
@@ -181,7 +183,7 @@
     const ch = ST[pos.c];
     const card = $('#card');
     card.querySelector('.card-era').textContent = ERA_LABEL[ch.era];
-    card.querySelector('.card-no').textContent = `第 ${ch.n} 章`;
+    card.querySelector('.card-no').textContent = ch.label || `第 ${ch.n} 章`;
     card.querySelector('.card-title').textContent = ch.title;
     card.querySelector('.card-sub').textContent = /編$/.test(ch.sub) ? '' : ch.sub;
     card.querySelector('.card-lead').textContent = ch.lead;

@@ -14,7 +14,13 @@ window.CHARS = {
   genzo:     { name: '玄蔵',   img: { high: 'genzo' } },
   suiran:    { name: '翠嵐',   img: { high: 'suiran' } },
   saku:      { name: '朔',     img: { high: 'saku' } },
-  setsuka:   { name: '雪華',   img: { high: 'setsuka' } }
+  setsuka:   { name: '雪華',   img: { high: 'setsuka' } },
+  // 第2部
+  rika:      { name: '莉花',   img: { high: 'rika' } },
+  todo:      { name: '藤堂',   img: { high: 'todo' } },
+  rio:       { name: '理央',   img: { high: 'rio' } },
+  tsukumo:   { name: '九十九', img: { high: 'tsukumo' } },
+  soleil:    { name: 'ソレイユ', img: { high: 'soleil' } }
 };
 
 // BGMの割り当て（ファイルはリポジトリ直下。差し替えはここを書き換えるだけ）
@@ -29,4 +35,4 @@ window.BGM = {
   climax1: 'climax1', climax2: 'climax2'
 };
 
-window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編' };
+window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編' };

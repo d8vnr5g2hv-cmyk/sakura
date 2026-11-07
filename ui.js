@@ -56,7 +56,7 @@
       if (ch.era !== era) { era = ch.era; const h = document.createElement('div'); h.className = 'era'; h.textContent = ERA_LABEL[era]; L.appendChild(h); }
       const b = document.createElement('button');
       b.className = 'chap' + (Save.d.read[ch.n] ? ' read' : '');
-      b.innerHTML = `<div class="no">${ch.n}</div><div><div class="t">${ch.title}</div><div class="s">${ch.sub}</div></div>` +
+      b.innerHTML = `<div class="no">${ch.label ? ch.label.replace('エピローグ', 'EP') : ch.n}</div><div><div class="t">${ch.title}</div><div class="s">${ch.sub}</div></div>` +
         (cur && cur.c === i ? '<div class="here">読んでいるところ</div>' : '');
       b.onclick = () => { titleFx && titleFx.stop(); Engine.start(i); };
       L.appendChild(b);
@@ -138,7 +138,7 @@
   // ---------- メニュー・しおり ----------
   function menu() {
     const w = Engine.where();
-    $('#menu .menu-where').innerHTML = `第${w.ch.n}章　${w.ch.title}<br>${w.sc.title}`;
+    $('#menu .menu-where').innerHTML = `${chNo(w.ch)}　${w.ch.title}<br>${w.sc.title}`;
     open('menu');
   }
   function slots(mode) {
@@ -148,7 +148,7 @@
       const b = document.createElement('button'); b.className = 'slot';
       if (s) {
         const ch = ST[s.c], sc = ch.scenes[s.s];
-        b.innerHTML = `<div class="th" style="background-image:url(${sc.bg}.webp)"></div><div><div class="t">しおり ${i + 1}　第${ch.n}章</div><div class="s">${ch.title}／${sc.title}<br>${s.at}</div></div>`;
+        b.innerHTML = `<div class="th" style="background-image:url(${sc.bg}.webp)"></div><div><div class="t">しおり ${i + 1}　${chNo(ch)}</div><div class="s">${ch.title}／${sc.title}<br>${s.at}</div></div>`;
       } else b.innerHTML = `<div class="th"></div><div><div class="t">しおり ${i + 1}</div><div class="s">空き</div></div>`;
       b.onclick = () => {
         if (mode === 'save') {
