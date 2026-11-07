@@ -29,7 +29,7 @@
     fadeOut(cur); cur = null;
     if (!name) return;
     const file = (window.BGM && BGM[name]) || name;
-    const el = new Audio('bgm/' + file + '.mp3');
+    const el = new Audio(file + '.mp3');
     el.loop = true; el.preload = 'auto'; el.crossOrigin = 'anonymous';
     let src;
     try { src = ctx.createMediaElementSource(el); } catch (e) { return; }

@@ -15,7 +15,7 @@
   function imgOf(key, era) {
     const ch = CHARS[key]; if (!ch) return null;
     const order = { kinder: ['kinder', 'elem', 'middle', 'high'], elem: ['elem', 'kinder', 'middle', 'high'], middle: ['middle', 'high', 'elem'], high: ['high', 'middle'] }[era];
-    for (const e of order) if (ch.img[e]) return { src: 'img/chara/' + ch.img[e] + '.webp', kid: e === 'kinder' || e === 'elem' };
+    for (const e of order) if (ch.img[e]) return { src: ch.img[e] + '.webp', kid: e === 'kinder' || e === 'elem' };
     return null;
   }
 
@@ -26,7 +26,7 @@
   }
   function setBg(sc) {
     const bg = $('#bg');
-    bg.style.backgroundImage = `url(img/bg/${sc.bg}.webp)`;
+    bg.style.backgroundImage = `url(${sc.bg}.webp)`;
     bg.classList.toggle('night', sc.mood === 'night' || (sc.dark && sc.mood !== 'awaken'));
   }
   function setCast(sc, era) {
@@ -72,8 +72,8 @@
       const r = img.naturalWidth / img.naturalHeight, scr = cg.clientWidth / cg.clientHeight;
       cg.classList.toggle('cover', Math.abs(r - scr) < 0.12 || (r < 0.75 && scr < 0.75 && r / scr < 1.25));
     };
-    img.src = `img/cg/${name}.webp`;
-    cg.querySelector('.cg-blur').style.backgroundImage = `url(img/cg/${name}.webp)`;
+    img.src = `${name}.webp`;
+    cg.querySelector('.cg-blur').style.backgroundImage = `url(${name}.webp)`;
     cg.classList.remove('on'); void cg.offsetWidth; cg.classList.add('on');
     $('#cast').style.opacity = 0;
     if (record && !Save.d.cg[name]) { Save.d.cg[name] = 1; Save.put(); }

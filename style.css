@@ -102,7 +102,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 
 /* ===== タイトル ===== */
 #title{background:var(--navy);z-index:30}
-.title-bg{position:absolute;inset:0;background:url(../img/cg/cg_yozakura.webp) center/cover;filter:brightness(.5) saturate(1.1)}
+.title-bg{position:absolute;inset:0;background:url(cg_yozakura.webp) center/cover;filter:brightness(.5) saturate(1.1)}
 .title-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,27,51,.2) 0%,rgba(20,27,51,.1) 40%,rgba(20,27,51,.85) 100%)}
 #titlefx{position:absolute;inset:0;pointer-events:none}
 .title-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding-top:calc(14vh + var(--safe-t))}

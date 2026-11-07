@@ -17,7 +17,7 @@ window.CHARS = {
   setsuka:   { name: '雪華',   img: { high: 'setsuka' } }
 };
 
-// BGMの割り当て（ファイルは bgm/ フォルダ。差し替えはここを書き換えるだけ）
+// BGMの割り当て（ファイルはリポジトリ直下。差し替えはここを書き換えるだけ）
 window.BGM = {
   title: 'title',
   daily1: 'daily1', daily2: 'daily2', daily3: 'daily3', daily4: 'daily4', daily5: 'daily5',

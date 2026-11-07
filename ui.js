@@ -76,9 +76,9 @@
       d.className = 'cell' + (has ? '' : ' lock');
       if (has) {
         got++;
-        d.style.backgroundImage = `url(img/cg/${name}.webp)`;
+        d.style.backgroundImage = `url(${name}.webp)`;
         d.innerHTML = `<span>${CG_TITLE[name] || ''}</span>`;
-        d.onclick = () => { const v = $('#viewer'); v.querySelector('img').src = `img/cg/${name}.webp`; v.querySelector('.cap').textContent = CG_TITLE[name] || ''; v.classList.add('on'); };
+        d.onclick = () => { const v = $('#viewer'); v.querySelector('img').src = `${name}.webp`; v.querySelector('.cap').textContent = CG_TITLE[name] || ''; v.classList.add('on'); };
       }
       G.appendChild(d);
     });
@@ -148,7 +148,7 @@
       const b = document.createElement('button'); b.className = 'slot';
       if (s) {
         const ch = ST[s.c], sc = ch.scenes[s.s];
-        b.innerHTML = `<div class="th" style="background-image:url(img/bg/${sc.bg}.webp)"></div><div><div class="t">しおり ${i + 1}　第${ch.n}章</div><div class="s">${ch.title}／${sc.title}<br>${s.at}</div></div>`;
+        b.innerHTML = `<div class="th" style="background-image:url(${sc.bg}.webp)"></div><div><div class="t">しおり ${i + 1}　第${ch.n}章</div><div class="s">${ch.title}／${sc.title}<br>${s.at}</div></div>`;
       } else b.innerHTML = `<div class="th"></div><div><div class="t">しおり ${i + 1}</div><div class="s">空き</div></div>`;
       b.onclick = () => {
         if (mode === 'save') {
