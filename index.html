@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#141b33">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="百花繚乱">
+<title>百花繚乱</title>
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="icon" href="img/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="themeA">
+<div id="app">
+
+  <!-- 本文画面 -->
+  <section id="stage" class="screen">
+    <div id="bg" class="layer"></div>
+    <div id="cast" class="layer"></div>
+    <div id="cg" class="layer"><div class="cg-blur"></div><img alt=""></div>
+    <canvas id="fx" class="layer"></canvas>
+    <div id="flash" class="layer"></div>
+    <div id="skill" class="layer"><span></span></div>
+    <div id="toast"></div>
+    <div id="hud">
+      <button data-act="auto">オート</button>
+      <button data-act="skip">早送り</button>
+      <button data-act="log">ログ</button>
+      <button data-act="hide">隠す</button>
+      <button data-act="menu">メニュー</button>
+    </div>
+    <div id="box"><div id="text"></div><div id="next"></div></div>
+    <div id="tap" class="layer"></div>
+  </section>
+
+  <!-- 章の扉 -->
+  <section id="card" class="screen">
+    <div class="card-inner">
+      <div class="card-era"></div>
+      <div class="card-no"></div>
+      <h2 class="card-title"></h2>
+      <div class="card-sub"></div>
+      <p class="card-lead"></p>
+      <div class="card-tap">タップで始める</div>
+    </div>
+  </section>
+
+  <!-- タイトル -->
+  <section id="title" class="screen show">
+    <div class="title-bg"></div>
+    <canvas id="titlefx"></canvas>
+    <div class="title-inner">
+      <h1 class="logo"><span>百</span><span>花</span><span>繚</span><span>乱</span></h1>
+      <div class="logo-sub">HYAKKA RYORAN</div>
+      <div class="title-menu">
+        <button data-go="new">はじめから</button>
+        <button data-go="continue">つづきから</button>
+        <button data-go="chapters">章をえらぶ</button>
+        <button data-go="gallery">回想</button>
+        <button data-go="settings">設定</button>
+      </div>
+    </div>
+    <div class="title-tap">タップしてください</div>
+  </section>
+
+  <!-- 章選択 -->
+  <section id="chapters" class="screen panel">
+    <header><button class="back" data-back>‹ もどる</button><h2>章をえらぶ</h2></header>
+    <div class="list"></div>
+  </section>
+
+  <!-- 回想 -->
+  <section id="gallery" class="screen panel">
+    <header><button class="back" data-back>‹ もどる</button><h2>回想</h2></header>
+    <div class="grid"></div>
+    <div id="viewer"><img alt=""><div class="cap"></div></div>
+  </section>
+
+  <!-- 設定 -->
+  <section id="settings" class="screen panel">
+    <header><button class="back" data-back>‹ もどる</button><h2>設定</h2></header>
+    <div class="form"></div>
+  </section>
+
+  <!-- ログ -->
+  <section id="log" class="screen panel overlay">
+    <header><button class="back" data-back>‹ 閉じる</button><h2>ログ</h2></header>
+    <div class="loglist"></div>
+  </section>
+
+  <!-- メニュー -->
+  <section id="menu" class="screen overlay">
+    <div class="menu-inner">
+      <div class="menu-where"></div>
+      <button data-m="save">しおりをはさむ</button>
+      <button data-m="load">しおりから読む</button>
+      <button data-m="chapters">章をえらぶ</button>
+      <button data-m="settings">設定</button>
+      <button data-m="title">タイトルへ</button>
+      <button data-m="close" class="ghost">閉じる</button>
+    </div>
+  </section>
+
+  <!-- しおり -->
+  <section id="slots" class="screen panel overlay">
+    <header><button class="back" data-back>‹ 閉じる</button><h2 class="slots-h">しおり</h2></header>
+    <div class="slotlist"></div>
+  </section>
+
+  <!-- おわり -->
+  <section id="ending" class="screen">
+    <div class="ending-inner">
+      <div class="end-1">百花繚乱</div>
+      <div class="end-2">高校編　完</div>
+      <p class="end-3">春は、まだ始まったばかりだった。</p>
+      <button data-go="title">タイトルへ</button>
+    </div>
+  </section>
+
+</div>
+<script src="data/chars.js"></script>
+<script src="data/story.js"></script>
+<script src="js/save.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
