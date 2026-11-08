@@ -34,7 +34,7 @@ window.CHARS = {
   odin:      { name: 'オーディン', img: { high: 'odin' } },
   uriel:     { name: 'ウリエル', img: { high: 'uriel' } },
   // 第4部（画像ができたら img に追加。なければ立ち絵なし）
-  makoto:    { name: '真琴',   img: {} },
+  makoto:    { name: '真琴',   img: { high: 'makoto' } },
   sayo:      { name: '氷室',   img: {} },
   hikari:    { name: '小早川', img: {} },
   kito:      { name: '鬼頭',   img: { high: 'kito' } },
