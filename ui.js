@@ -53,7 +53,7 @@
     let era = '';
     const cur = Save.d.cur;
     ST.forEach((ch, i) => {
-      if (ch.era !== era) { era = ch.era; const h = document.createElement('div'); h.className = 'era'; h.textContent = ERA_LABEL[era]; L.appendChild(h); }
+      if (ERA_LABEL[ch.era] !== era) { era = ERA_LABEL[ch.era]; const h = document.createElement('div'); h.className = 'era'; h.textContent = ERA_LABEL[era]; L.appendChild(h); }
       const b = document.createElement('button');
       b.className = 'chap' + (Save.d.read[ch.n] ? ' read' : '');
       b.innerHTML = `<div class="no">${ch.label ? ch.label.replace('エピローグ', 'EP') : ch.n}</div><div><div class="t">${ch.title}</div><div class="s">${ch.sub}</div></div>` +
