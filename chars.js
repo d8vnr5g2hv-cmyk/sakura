@@ -16,7 +16,7 @@ window.CHARS = {
   saku:      { name: '朔',     img: { high: 'saku' } },
   setsuka:   { name: '雪華',   img: { high: 'setsuka' } },
   // 第2部
-  rika:      { name: '莉花',   img: { high: 'rika', high3: 'rika_p3', high4: 'rika_p4' } },
+  rika:      { name: '莉花',   img: { high: 'rika', high3: 'rika_p3', high4: 'rika_p4', high5: 'rika_p5' } },
   todo:      { name: '藤堂',   img: { high: 'todo' } },
   rio:       { name: '理央',   img: { high: 'rio' } },
   tsukumo:   { name: '九十九', img: { high: 'tsukumo' } },
@@ -39,7 +39,20 @@ window.CHARS = {
   hikari:    { name: '小早川', img: {} },
   kito:      { name: '鬼頭',   img: { high: 'kito' } },
   nurarihyon:{ name: 'ぬらりひょん', img: { high: 'nurarihyon' } },
-  noa4:      { name: '乃亜',   img: { high4: 'noa_p4' } },
+  noa4:      { name: '乃亜',   img: { high4: 'noa_p4', high5: 'noa_p5' } },
+  // 第5部（画像ができたら img に追加。なければ立ち絵なし）
+  shiro:     { name: 'シロ',   img: { high: 'shiro' } },
+  shiro_b:   { name: 'シロ',   img: { high: 'shiro_b' } },
+  rika4:     { name: '莉花',   img: { high: 'rika_p4' } },
+  beelzebub: { name: 'ベルゼブブ', img: { high: 'beelzebub' } },
+  lucifer:   { name: 'ルシファー', img: { high: 'lucifer' } },
+  ifrit:     { name: 'イフリート', img: { high: 'ifrit' } },
+  galahad:   { name: 'ギャラハッド', img: {} },
+  zeus:      { name: 'ゼウス', img: { high: 'zeus' } },
+  fanaris:   { name: 'ファナリス', img: { high: 'fanaris' } },
+  alice:     { name: 'アリス', img: { high: 'alice' } },
+  cerberus:  { name: 'ケルベロス', img: { high: 'cerberus' } },
+  kappa:     { name: '河童',   img: { high: 'kappa' } },
   cafe:      { name: '店員',   img: { high: 'cafe' } }
 };
 
@@ -55,4 +68,4 @@ window.BGM = {
   climax1: 'climax1', climax2: 'climax2'
 };
 
-window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編' };
+window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編' };
