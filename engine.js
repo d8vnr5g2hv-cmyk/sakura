@@ -16,7 +16,7 @@
   window.chNo = chNo;
   function imgOf(key, era) {
     const ch = CHARS[key]; if (!ch) return null;
-    const order = { kinder: ['kinder', 'elem', 'middle', 'high'], elem: ['elem', 'kinder', 'middle', 'high'], middle: ['middle', 'high', 'elem'], high: ['high', 'middle'], high2: ['high', 'middle'], high3a: ['high', 'middle'], high3: ['high3', 'high', 'middle'], high4: ['high4', 'high3', 'high', 'middle'], high5: ['high5', 'high4', 'high3', 'high', 'middle'] }[era] || ['high5', 'high4', 'high3', 'high', 'middle'];
+    const order = { kinder: ['kinder', 'elem', 'middle', 'high'], elem: ['elem', 'kinder', 'middle', 'high'], middle: ['middle', 'high', 'elem'], high: ['high', 'middle'], high2: ['high', 'middle'], high3a: ['high', 'middle'], high3: ['high3', 'high', 'middle'], high4: ['high4', 'high3', 'high', 'middle'], high5: ['high5', 'high4', 'high3', 'high', 'middle'], high6: ['high6', 'high5', 'high4', 'high3', 'high', 'middle'] }[era] || ['high6', 'high5', 'high4', 'high3', 'high', 'middle'];
     for (const e of order) if (ch.img[e]) return { src: ch.img[e] + '.webp', kid: e === 'kinder' || e === 'elem' };
     return null;
   }

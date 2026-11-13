@@ -2,7 +2,7 @@
 // 年代: kinder=幼稚園 / elem=小学校 / middle=中学 / high=高校
 // 画像がない年代は、近い年代の画像を使う（null の場合は立ち絵を出さない）
 window.CHARS = {
-  yohei:     { name: '耀平',   img: { kinder: 'yohei_kinder', elem: 'yohei_elem', middle: 'yohei_middle', high: 'yohei_high', high3: 'yohei_p3', high4: 'yohei_p4' } },
+  yohei:     { name: '耀平',   img: { kinder: 'yohei_kinder', elem: 'yohei_elem', middle: 'yohei_middle', high: 'yohei_high', high3: 'yohei_p3', high4: 'yohei_p4', high6: 'yohei_p6' } },
   noa:       { name: '乃亜',   img: { kinder: 'noa_kinder',   elem: 'noa_elem',   middle: 'noa_middle',   high: 'noa_high' } },
   ryoma:     { name: '竜馬',   img: { kinder: 'ryoma_kinder', elem: 'ryoma_elem', middle: 'ryoma_middle', high: 'ryoma_high' } },
   yuzuki:    { name: '柚月',   img: { middle: 'yuzuki_middle', high: 'yuzuki' } },
@@ -16,13 +16,13 @@ window.CHARS = {
   saku:      { name: '朔',     img: { high: 'saku' } },
   setsuka:   { name: '雪華',   img: { high: 'setsuka' } },
   // 第2部
-  rika:      { name: '莉花',   img: { high: 'rika', high3: 'rika_p3', high4: 'rika_p4', high5: 'rika_p5' } },
+  rika:      { name: '莉花',   img: { high: 'rika', high3: 'rika_p3', high4: 'rika_p4', high5: 'rika_p5', high6: 'rika_p6' } },
   todo:      { name: '藤堂',   img: { high: 'todo' } },
   rio:       { name: '理央',   img: { high: 'rio' } },
   tsukumo:   { name: '九十九', img: { high: 'tsukumo' } },
   soleil:    { name: 'ソレイユ', img: { high: 'soleil' } },
   // 第3部
-  ramy:      { name: 'ラミィ', img: { high: 'ramy', high4: 'ramy_p4' } },
+  ramy:      { name: 'ラミィ', img: { high: 'ramy', high4: 'ramy_p4', high6: 'ramy_p6' } },
   remy:      { name: 'レミィ', img: { high: 'remy' } },
   ogami:     { name: '大神',   img: { high: 'ogami' } },
   yanagi:    { name: '柳',     img: { high: 'yanagi' } },
@@ -39,7 +39,7 @@ window.CHARS = {
   hikari:    { name: '小早川', img: {} },
   kito:      { name: '鬼頭',   img: { high: 'kito' } },
   nurarihyon:{ name: 'ぬらりひょん', img: { high: 'nurarihyon' } },
-  noa4:      { name: '乃亜',   img: { high4: 'noa_p4', high5: 'noa_p5' } },
+  noa4:      { name: '乃亜',   img: { high4: 'noa_p4', high5: 'noa_p5', high6: 'noa_p6' } },
   // 第5部（画像ができたら img に追加。なければ立ち絵なし）
   shiro:     { name: 'シロ',   img: { high: 'shiro' } },
   shiro_b:   { name: 'シロ',   img: { high: 'shiro_b' } },
@@ -47,11 +47,28 @@ window.CHARS = {
   beelzebub: { name: 'ベルゼブブ', img: { high: 'beelzebub' } },
   lucifer:   { name: 'ルシファー', img: { high: 'lucifer' } },
   ifrit:     { name: 'イフリート', img: { high: 'ifrit' } },
-  galahad:   { name: 'ギャラハッド', img: {} },
+  galahad:   { name: 'ギャラハッド', img: { high: 'galahad' } },
   zeus:      { name: 'ゼウス', img: { high: 'zeus' } },
   fanaris:   { name: 'ファナリス', img: { high: 'fanaris' } },
   alice:     { name: 'アリス', img: { high: 'alice' } },
   cerberus:  { name: 'ケルベロス', img: { high: 'cerberus' } },
+  // 第6部（画像ができたら img に追加。なければ立ち絵なし）
+  hades:     { name: 'ハデス', img: { high: 'hades' } },
+  michael:   { name: 'ミカエル', img: { high: 'michael' } },
+  gabriel:   { name: 'ガブリエル', img: { high: 'gabriel' } },
+  raphael:   { name: 'ラファエル', img: { high: 'raphael' } },
+  apollo:    { name: 'アポロン', img: {} },
+  athena:    { name: 'アテナ', img: {} },
+  ares:      { name: 'アレス', img: {} },
+  poseidon:  { name: 'ポセイドン', img: {} },
+  thor:      { name: 'トール', img: {} },
+  toko:      { name: '榊透子', img: { high: 'toko' } },
+  fuku:      { name: '副学長', img: {} },
+  yohei5:    { name: '耀平',   img: { high: 'yohei_p4' } },
+  rika5:     { name: '莉花',   img: { high: 'rika_p5' } },
+  noa5:      { name: '乃亜',   img: { high: 'noa_p5' } },
+  ramy5:     { name: 'ラミィ', img: { high: 'ramy_p4' } },
+  boy:       { name: '少年', img: {} },
   kappa:     { name: '河童',   img: { high: 'kappa' } },
   cafe:      { name: '店員',   img: { high: 'cafe' } }
 };
@@ -68,4 +85,4 @@ window.BGM = {
   climax1: 'climax1', climax2: 'climax2'
 };
 
-window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編' };
+window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編', high6: '第6部 四季繚乱編' };
