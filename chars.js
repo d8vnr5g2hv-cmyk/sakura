@@ -41,7 +41,7 @@ window.CHARS = {
   nurarihyon:{ name: 'ぬらりひょん', img: { high: 'nurarihyon' } },
   noa4:      { name: '乃亜',   img: { high4: 'noa_p4', high5: 'noa_p5', high6: 'noa_p6' } },
   // 第5部（画像ができたら img に追加。なければ立ち絵なし）
-  shiro:     { name: 'シロ',   img: { high: 'shiro' } },
+  shiro:     { name: 'シロ',   img: { high: 'shiro', high6: 'shiro_p6' } },
   shiro_b:   { name: 'シロ',   img: { high: 'shiro_b' } },
   rika4:     { name: '莉花',   img: { high: 'rika_p4' } },
   beelzebub: { name: 'ベルゼブブ', img: { high: 'beelzebub' } },
