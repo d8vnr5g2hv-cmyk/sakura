@@ -68,6 +68,7 @@ window.CHARS = {
   rika5:     { name: '莉花',   img: { high: 'rika_p5' } },
   noa5:      { name: '乃亜',   img: { high: 'noa_p5' } },
   ramy5:     { name: 'ラミィ', img: { high: 'ramy_p4' } },
+  alice6:    { name: 'アリス', img: { high: 'alice_p6' } },
   boy:       { name: '少年', img: {} },
   kappa:     { name: '河童',   img: { high: 'kappa' } },
   cafe:      { name: '店員',   img: { high: 'cafe' } }
