@@ -76,6 +76,9 @@ window.CHARS = {
   yohei7:    { name: '耀平',   img: { high: 'yohei_ouran' } },
   yohei8k:   { name: '耀平',   img: { high: 'yohei_kiwami8' } },
   tsukai:    { name: '遣い',   img: { high: 'tsukai' } },
+  niggurath: { name: 'シュブ＝ニグラス', img: { high: 'niggurath' } },
+  kurokamiyagi: { name: '大黒山羊', img: { high: 'kurokamiyagi' } },
+  muramasa:  { name: 'ムラマサ', img: { high: 'muramasa' } },
   boy:       { name: '少年', img: {} },
   kappa:     { name: '河童',   img: { high: 'kappa' } },
   cafe:      { name: '店員',   img: { high: 'cafe' } }
@@ -93,4 +96,4 @@ window.BGM = {
   climax1: 'climax1', climax2: 'climax2'
 };
 
-window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編', high6: '第6部 四季繚乱編', high7: '第7部 桜蘭暦刀編', high8a: '第8部 星渡り編', high8: '第8部 星渡り編' };
+window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編', high6: '第6部 四季繚乱編', high7: '第7部 桜蘭暦刀編', high8a: '第8部 星渡り編', high8: '第8部 星渡り編', high9: '第9部 黒山羊の森編' };
