@@ -2,7 +2,7 @@
 // 年代: kinder=幼稚園 / elem=小学校 / middle=中学 / high=高校
 // 画像がない年代は、近い年代の画像を使う（null の場合は立ち絵を出さない）
 window.CHARS = {
-  yohei:     { name: '耀平',   img: { kinder: 'yohei_kinder', elem: 'yohei_elem', middle: 'yohei_middle', high: 'yohei_high', high3: 'yohei_p3', high4: 'yohei_p4', high6: 'yohei_p6', high7: 'yohei_p7' } },
+  yohei:     { name: '耀平',   img: { kinder: 'yohei_kinder', elem: 'yohei_elem', middle: 'yohei_middle', high: 'yohei_high', high3: 'yohei_p3', high4: 'yohei_p4', high6: 'yohei_p6', high7: 'yohei_p7', high8a: 'yohei_ouran', high8: 'yohei_p8' } },
   noa:       { name: '乃亜',   img: { kinder: 'noa_kinder',   elem: 'noa_elem',   middle: 'noa_middle',   high: 'noa_high' } },
   ryoma:     { name: '竜馬',   img: { kinder: 'ryoma_kinder', elem: 'ryoma_elem', middle: 'ryoma_middle', high: 'ryoma_high' } },
   yuzuki:    { name: '柚月',   img: { middle: 'yuzuki_middle', high: 'yuzuki' } },
@@ -16,13 +16,13 @@ window.CHARS = {
   saku:      { name: '朔',     img: { high: 'saku' } },
   setsuka:   { name: '雪華',   img: { high: 'setsuka' } },
   // 第2部
-  rika:      { name: '莉花',   img: { high: 'rika', high3: 'rika_p3', high4: 'rika_p4', high5: 'rika_p5', high6: 'rika_p6', high7: 'rika_p7' } },
+  rika:      { name: '莉花',   img: { high: 'rika', high3: 'rika_p3', high4: 'rika_p4', high5: 'rika_p5', high6: 'rika_p6', high7: 'rika_p7', high8: 'rika_p8' } },
   todo:      { name: '藤堂',   img: { high: 'todo' } },
   rio:       { name: '理央',   img: { high: 'rio' } },
   tsukumo:   { name: '九十九', img: { high: 'tsukumo' } },
   soleil:    { name: 'ソレイユ', img: { high: 'soleil' } },
   // 第3部
-  ramy:      { name: 'ラミィ', img: { high: 'ramy', high4: 'ramy_p4', high6: 'ramy_p6' } },
+  ramy:      { name: 'ラミィ', img: { high: 'ramy', high4: 'ramy_p4', high6: 'ramy_p6', high8: 'ramy_p8' } },
   remy:      { name: 'レミィ', img: { high: 'remy' } },
   ogami:     { name: '大神',   img: { high: 'ogami' } },
   yanagi:    { name: '柳',     img: { high: 'yanagi' } },
@@ -39,9 +39,9 @@ window.CHARS = {
   hikari:    { name: '小早川', img: {} },
   kito:      { name: '鬼頭',   img: { high: 'kito' } },
   nurarihyon:{ name: 'ぬらりひょん', img: { high: 'nurarihyon' } },
-  noa4:      { name: '乃亜',   img: { high4: 'noa_p4', high5: 'noa_p5', high6: 'noa_p6', high7: 'noa_p7' } },
+  noa4:      { name: '乃亜',   img: { high4: 'noa_p4', high5: 'noa_p5', high6: 'noa_p6', high7: 'noa_p7', high8: 'noa_p8' } },
   // 第5部（画像ができたら img に追加。なければ立ち絵なし）
-  shiro:     { name: 'シロ',   img: { high: 'shiro', high6: 'shiro_p6' } },
+  shiro:     { name: 'シロ',   img: { high: 'shiro', high6: 'shiro_p6', high8: 'shiro_p8' } },
   shiro_b:   { name: 'シロ',   img: { high: 'shiro_b' } },
   rika4:     { name: '莉花',   img: { high: 'rika_p4' } },
   beelzebub: { name: 'ベルゼブブ', img: { high: 'beelzebub' } },
@@ -50,7 +50,7 @@ window.CHARS = {
   galahad:   { name: 'ギャラハッド', img: { high: 'galahad' } },
   zeus:      { name: 'ゼウス', img: { high: 'zeus' } },
   fanaris:   { name: 'ファナリス', img: { high: 'fanaris' } },
-  alice:     { name: 'アリス', img: { high: 'alice' } },
+  alice:     { name: 'アリス', img: { high: 'alice', high8a: 'alice_p6', high8: 'alice_p8' } },
   cerberus:  { name: 'ケルベロス', img: { high: 'cerberus' } },
   // 第6部（画像ができたら img に追加。なければ立ち絵なし）
   hades:     { name: 'ハデス', img: { high: 'hades' } },
@@ -70,10 +70,12 @@ window.CHARS = {
   ramy5:     { name: 'ラミィ', img: { high: 'ramy_p4' } },
   alice6:    { name: 'アリス', img: { high: 'alice_p6' } },
   // 第7部（画像ができたら img に追加）
-  alpha:     { name: 'アルファ', img: { high: 'alpha' } },
+  alpha:     { name: 'アルファ', img: { high: 'alpha', high8: 'alpha_p8' } },
   gantetsu:  { name: 'ガンテツ', img: { high: 'gantetsu' } },
   bakuro:    { name: '馬喰',   img: { high: 'bakuro' } },
   yohei7:    { name: '耀平',   img: { high: 'yohei_ouran' } },
+  yohei8k:   { name: '耀平',   img: { high: 'yohei_kiwami8' } },
+  tsukai:    { name: '遣い',   img: { high: 'tsukai' } },
   boy:       { name: '少年', img: {} },
   kappa:     { name: '河童',   img: { high: 'kappa' } },
   cafe:      { name: '店員',   img: { high: 'cafe' } }
@@ -91,4 +93,4 @@ window.BGM = {
   climax1: 'climax1', climax2: 'climax2'
 };
 
-window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編', high6: '第6部 四季繚乱編', high7: '第7部 桜蘭暦刀編' };
+window.ERA_LABEL = { kinder: '幼稚園編', elem: '小学校編', middle: '中学編', high: '高校編', high2: '第2部 二年生編', high3a: '第3部 枯花計画編', high3: '第3部 枯花計画編', high4: '第4部 復讐編', high5: '第5部 花鳥風月編', high6: '第6部 四季繚乱編', high7: '第7部 桜蘭暦刀編', high8a: '第8部 星渡り編', high8: '第8部 星渡り編' };
